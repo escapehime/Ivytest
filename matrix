@@ -20,10 +20,10 @@ Incident_matrix = np.array([[E0_value], [F0_value]])
 
 #define process
 def definition_process(row):
-    B_value = row['B'].iloc[1:]
-    C_value = row['C'].iloc[1:]
-    D_value = row['D'].iloc[1:]
-    E_value = row['E'].iloc[1:]
+    B_value = row['B']
+    C_value = row['C']
+    D_value = row['D']
+    E_value = row['E']
     ONE = int(1)
     ZERO =int(0)
     
@@ -47,7 +47,7 @@ def definition_process(row):
     return Process_matrix
 
 Process_matrices = []
-for index, row in df_ABCDmatrix.iterrows():
+for index, row in df_ABCDmatrix.iloc[2:].iterrows():
     Process_matrix = definition_process(row)
     if Process_matrix is not None:
         Process_matrices.append(Process_matrix)
