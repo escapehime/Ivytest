@@ -1,0 +1,8 @@
+Object,Type,refraction rate,Radius(R > 0 for convex),Xn,Xtheta
+Lightsource,0,1,None,0,30
+L1,Air,1,None,3,
+L2,FlatLens,1.3,None,3,
+L3,None,1,None,5,
+L4,Curvedlens,1.2,1.5,5,
+L5,None,1,None,12,
+L5,Curvedlens,1.1,-2,12,
