@@ -67,19 +67,11 @@ for i, Process_matrix in enumerate(Process_matrices):
 
 
 #End process
-# Create a copy of the original DataFrames
-ABCDmatrix_copy = df_ABCDmatrix.copy()
-
 # Prepare the result DataFrame
 result_df = pd.DataFrame({'Xe': [Emergent_matrices[-1][0, 0]], 'Xetheta': [Emergent_matrices[-1][1, 0]]})
 
 # Create a new Excel writer object
 writer = pd.ExcelWriter('final_result.csv', engine='openpyxl')
 
-# Write the copied DataFrames and the result DataFrame to the new Excel file
-ABCDmatrix_copy.to_excel(writer, sheet_name='Setup', index=False)
-result_df.to_excel(writer, sheet_name='result', index=False, )
-
 # Save the DataFrames to new CSV files
-ABCDmatrix_copy.to_csv('final_result_ABCDmatrix.csv', index=False)
 result_df.to_csv('final_result.csv', index=False, startrow=1, header=['Xe', 'Xetheta'])
