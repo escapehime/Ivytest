@@ -56,8 +56,8 @@ for index, row in df_ABCDmatrix.iloc[2:].iterrows():
     Process_matrix = definition_process(row)
     if Process_matrix is not None:
         Process_matrices.append(Process_matrix)
-        # Update last_E_value after successful processing
         last_E_value = row['E']
+        # Update last_E_value after successful processing
     else:
         print('hi')
 
