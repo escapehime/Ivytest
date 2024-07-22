@@ -18,6 +18,9 @@ F0_value = df_ABCDmatrix.at[0, 'F']  # Accessing the value at row index 1, colum
 # Create the Incident_matrix with E2 as the first row and F2 as the second row
 Incident_matrix = np.array([[E0_value], [F0_value]])
 
+# Define last_E_value before the loop
+last_E_value = None
+
 #define process
 def definition_process(row):
     B_value = row['B']
