@@ -33,9 +33,9 @@ def definition_process(row):
 
     if B_value == 'None':
          if B_value == 'None' and last_E_value is not None:  # Check if last_E_value is available
-        Delta = E_value - last_E_value
+             Delta = E_value - last_E_value
          else:
-        Delta = E_value - E0_value  # Initial calculation of Delta
+             Delta = E_value - E0_value  # Initial calculation of Delta
     elif B_value == 'FlatLens':
         Nv = ONE / C_value
         Process_matrix = np.array([[ONE, ZERO], [ZERO, Nv]])
