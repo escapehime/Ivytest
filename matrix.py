@@ -11,7 +11,6 @@ df = pd.read_csv('ABCDmatrix.csv')
 Incident_matrix = df.iloc[0, 4:6].values.reshape(2, 1)
 print(Incident_matrix)
 
-# Assign integer
 
 # Function to create the Definition_Matrix based on the lens type
 def create_definition_matrix(row, prev_row):
@@ -63,8 +62,7 @@ for index in range(1, len(df)):
 print(Emergent_matrix) #test the result
 result_df = pd.DataFrame({
     'X_emergent': [Emergent_matrix[0, 0]],
-    'Xtheta_emergent': [Emergent_matrix[1, 0]]
-})
+    'Xtheta_emergent': [Emergent_matrix[1, 0]]})
 
 # Save the result to a new CSV file
 result_df.to_csv('result.csv', index=False)
